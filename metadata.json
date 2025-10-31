@@ -1,0 +1,5 @@
+{
+  "name": "Prototype",
+  "description": "A dashboard-based application offering a suite of evidence-based tools for anxiety and panic. Features include a tools library, emergency AI, knowledge base, courses, routines, and therapist connections.",
+  "requestFramePermissions": []
+}

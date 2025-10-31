@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#0ea5e9', // sky-500
+              'primary-focus': '#0284c7', // sky-600
+              'primary-content': '#FFFFFF',
+              'secondary': '#06b6d4', // cyan-500
+              'secondary-focus': '#0891b2', // cyan-600
+              'secondary-content': '#FFFFFF',
+              'background': '#F9FAFB', // Gray-50
+              'surface': '#FFFFFF',
+              'surface-muted': '#F3F4F6', // Gray-100
+              'text-primary': '#1F2937', // Gray-800
+              'text-secondary': '#6B7280', // Gray-500
+              'accent': '#2dd4bf', // teal-400
+              'emergency': '#E11D48', // Rose-600
+              'emergency-light': '#FFF1F2' // Rose-50
+            },
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+            },
+            boxShadow: {
+                'card': '0 1px 3px 0 rgb(0 0 0 / 0.07), 0 1px 2px -1px rgb(0 0 0 / 0.07)',
+                'card-hover': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+                'input': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+                'header': '0 1px 3px 0 rgb(0 0 0 / 0.07)',
+            },
+            borderRadius: {
+                'box': '1rem',
+                'card': '0.75rem', // 12px
+                'button': '0.5rem', // 8px
+            },
+            animation: {
+              'breather': 'breather 8s ease-in-out infinite',
+              'fade-in': 'fadeIn 0.5s ease-in-out forwards',
+              'slide-in-up': 'slideInUp 0.5s ease-out forwards',
+            },
+            keyframes: {
+              breather: {
+                '0%, 100%': { transform: 'scale(0.9)', opacity: '0.7' },
+                '50%': { transform: 'scale(1.05)', opacity: '1' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-background font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
